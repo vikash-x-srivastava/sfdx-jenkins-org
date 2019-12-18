@@ -36,13 +36,15 @@ node {
             if (rc != 0) {
                 error 'Salesforce org authorization failed.'
             }
+		rmsg = command "${toolbelt}/sfdx force:project:create -n MyProject --template standard"
+		rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
         }
 
 
         // -------------------------------------------------------------------------
         // Deploy metadata and execute unit tests.
         // -------------------------------------------------------------------------
-
+	
         stage('Deploy and Run Tests') {
             rc = command "${toolbelt}/sfdx force:mdapi:deploy --wait 10 --deploydir ${DEPLOYDIR} --targetusername UAT --testlevel ${TEST_LEVEL}"
             if (rc != 0) {
@@ -50,7 +52,7 @@ node {
             }
         }
 
-
+		
         // -------------------------------------------------------------------------
         // Example shows how to run a check-only deploy.
         // -------------------------------------------------------------------------
