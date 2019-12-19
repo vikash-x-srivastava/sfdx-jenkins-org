@@ -7,6 +7,7 @@ node {
     def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='src'
     def TEST_LEVEL='RunLocalTests'
+    def SF_USERNAME='software.vikash@gmail.com.dev'
 
 
     def toolbelt = tool 'toolbelt'
@@ -37,7 +38,7 @@ node {
                 error 'Salesforce org authorization failed.'
             }
 		rmsg = command "${toolbelt}/sfdx force:project:create -n MyProject --template standard"
-		rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
+		rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername  ${SF_USERNAME}"
         }
 
 
