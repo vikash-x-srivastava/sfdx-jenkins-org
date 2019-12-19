@@ -6,7 +6,7 @@ node {
     def SF_USERNAME=env.SF_USERNAME
     def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='src'
-    //def TEST_LEVEL='RunLocalTests'
+    def TEST_LEVEL=''
 
 
     def toolbelt = tool 'toolbelt'
