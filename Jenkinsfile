@@ -36,8 +36,8 @@ node {
             if (rc != 0) {
                 error 'Salesforce org authorization failed.'
             }
-		rc = command "${toolbelt}/sfdx force:project:create -n MyProject --template standard"
-		rc = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
+		rmsg = command "${toolbelt}/sfdx force:project:create -n MyProject --template standard"
+		rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create --definitionfile config/project-scratch-def.json --json --setdefaultusername"
         }
 
 
