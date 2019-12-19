@@ -7,7 +7,7 @@ node {
     def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='src'
     def TEST_LEVEL='RunLocalTests'
-    def SF_USERNAME='software.vikash@gmail.com.dev'
+
 
 
     def toolbelt = tool 'toolbelt'
