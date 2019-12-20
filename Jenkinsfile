@@ -5,7 +5,7 @@ node {
 
     def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
     def SF_USERNAME=env.SF_USERNAME
-    def SERVER_KEY_CREDENTIALS_ID=env.JWT_CRED_ID_DH
+    def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='force-app'
     def TEST_LEVEL='RunLocalTests'
     def RUN_ARTIFACT_DIR="tests/${BUILD_NUMBER}"    
