@@ -11,7 +11,7 @@ public class testclassruntest {
     
     static testmethod void TestSingleBooking() {
          Account thing = new Account();
-        thing.Name = 'Test123';
+        thing.Name = 'Test1233434';
         insert thing;
     }
     
