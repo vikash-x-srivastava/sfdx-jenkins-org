@@ -8,7 +8,7 @@ node {
     def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='force-app'
     def TEST_LEVEL='RunLocalTests'
-    def RUN_ARTIFACT_DIR="/tests/${BUILD_NUMBER}"    
+    def RUN_ARTIFACT_DIR="\tests/${BUILD_NUMBER}"    
     
 
 
@@ -69,7 +69,7 @@ node {
         }
 
         stage('Run Apex Test') {
-        bat "mkdir -p ${RUN_ARTIFACT_DIR}"
+        bat "mkdir  ${RUN_ARTIFACT_DIR}"
         timeout(time: 120, unit: 'SECONDS') {
    	    rc = command "${toolbelt}/sfdx force:apex:test:run --testlevel RunLocalTests --outputdir ${RUN_ARTIFACT_DIR} --resultformat tap --targetusername ${SFDC_USERNAME}"
 	if (rc != 0) {
