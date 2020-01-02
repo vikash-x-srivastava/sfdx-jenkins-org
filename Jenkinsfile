@@ -8,7 +8,7 @@ node {
     def SERVER_KEY_CREDENTIALS_ID=env.SERVER_KEY_CREDENTIALS_ID
     def DEPLOYDIR='force-app'
     def TEST_LEVEL='RunLocalTests'
-    def RUN_ARTIFACT_DIR="\tests\${BUILD_NUMBER}"    
+    def RUN_ARTIFACT_DIR=\"tests\"\"${BUILD_NUMBER}"    
     
 
 
