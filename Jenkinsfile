@@ -44,11 +44,11 @@ node {
             if (rc != 0) {
                 error 'Salesforce org authorization failed.'
             }
-            //rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create -s -f config/project-scratch-def.json -a dreamhouse-org2 -v ${SF_USERNAME}"
-            //rtxt = rmsg.substring(rmsg.lastIndexOf("username: ") + 10)
-            //echo rtxt
-            //SFDC_USERNAME=rtxt
-	    SFDC_USERNAME="test-es6petif8ejj@example.com"
+            rmsg = bat returnStdout: true, script: "${toolbelt}/sfdx force:org:create -s -f config/project-scratch-def.json -a dreamhouse-org2 -v ${SF_USERNAME}"
+            rtxt = rmsg.substring(rmsg.lastIndexOf("username: ") + 10)
+            echo rtxt
+            SFDC_USERNAME=rtxt
+	    //SFDC_USERNAME="test-es6petif8ejj@example.com"
 		
          //   def jsonSlurper = new JsonSlurperClassic()
          //   def robj = jsonSlurper.parseText(rmsg)
