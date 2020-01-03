@@ -13,6 +13,9 @@ public class testclassruntest {
          Account thing = new Account();
         thing.Name = 'Test1233434';
         insert thing;
+        Account thing1 = new Account();
+        thing1.Name = 'Test1233test';
+        insert thing1;
     }
     
     
